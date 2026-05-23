@@ -1,0 +1,75 @@
+name: Social Media Auto-Post
+
+on:
+  # Scheduled trigger — runs daily at 09:00 UTC
+  schedule:
+    - cron: "0 9 * * *"
+
+  # Manual trigger via GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      platforms:
+        description: "Comma-separated platforms (twitter, facebook, instagram)"
+        required: true
+        default: "twitter,facebook"
+      post_id:
+        description: "Specific post ID from posts.yaml (leave empty for auto-select)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Dry run (true/false)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run social media bot
+        env:
+          # Twitter/X credentials (set these in repo Settings → Secrets)
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+
+          # Facebook credentials
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+
+          # Instagram credentials
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          PLATFORMS="${{ github.event.inputs.platforms || 'twitter,facebook' }}"
+          POST_ID="${{ github.event.inputs.post_id }}"
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
+
+          CMD="python -m social_media_bot.poster --platforms $PLATFORMS"
+
+          if [ -n "$POST_ID" ]; then
+            CMD="$CMD --post-id $POST_ID"
+          fi
+
+          if [ "$DRY_RUN" = "true" ]; then
+            CMD="$CMD --dry-run"
+          fi
+
+          echo "Running: $CMD"
+          $CMD
