@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>زائچہ عبد الرحمٰن | روحانی و علمِ نجوم کا مکمل تجزیہ — سید نعمان علی شاہ</title>
+<meta name="description" content="عبد الرحمٰن کا مکمل اور تفصیلی زائچہ، سیاروی پوزیشن، برج تجزیہ، اور سال بہ سال ماضی و مستقبل کی پیش گوئی۔ تیار کردہ: سید نعمان علی شاہ"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --gold:#C9A84C;
+    --gold-light:#F0D080;
+    --gold-bright:#FFD700;
+    --gold-dark:#8B6914;
+    --black:#000000;
+    --black-deep:#040302;
+    --black-card:#0A0806;
+    --black-panel:#0F0B07;
+    --white:#FFFFFF;
+    --cream:#F5EDD0;
+    --maroon:#2A1206;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 60% at 80% 90%, rgba(139,105,20,0.10) 0%, transparent 55%),
+      #000;
+    color:var(--cream);
+    font-family:'Noto Nastaliq Urdu','Amiri',serif;
+    overflow-x:hidden;
+    line-height:2.4;
+  }
+
+  /* Starfield */
+  #starfield{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+  .star{position:absolute;background:var(--gold-light);border-radius:50%;
+    animation:twinkle var(--dur,3s) infinite ease-in-out;opacity:0;}
+  @keyframes twinkle{0%,100%{opacity:0;transform:scale(1);}50%{opacity:var(--op,0.85);transform:scale(1.6);}}
+
+  .grid-overlay{position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+    background-size:70px 70px;}
+
+  .wrap{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:0 22px 80px;}
+
+  /* Latin text helper */
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:'Cinzel',serif;letter-spacing:.5px;}
+  .label-en{font-family:'Cinzel',serif;letter-spacing:2px;font-size:.72rem;color:var(--gold);text-transform:uppercase;opacity:.85;}
+
+  /* ===== Hero ===== */
+  header.hero{
+    text-align:center;padding:60px 16px 36px;position:relative;
+  }
+  .bismillah{
+    font-family:'Amiri',serif;font-weight:700;direction:rtl;
+    font-size:clamp(1.6rem,5vw,2.8rem);
+    background:linear-gradient(180deg,var(--gold-light),var(--gold-bright),var(--gold-dark));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    line-height:1.6;margin-bottom:10px;
+    filter:drop-shadow(0 2px 14px rgba(201,168,76,0.35));
+  }
+  .crest{
+    width:84px;height:84px;margin:14px auto 18px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 50% 35%, #1a1206, #000);
+    border:2px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,0.4),inset 0 0 22px rgba(201,168,76,0.25);
+    font-size:2.2rem;color:var(--gold-bright);position:relative;
+  }
+  .crest::after{content:'';position:absolute;inset:-9px;border-radius:50%;border:1px dashed rgba(201,168,76,0.5);animation:spin 26s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  h1.title{
+    font-family:'Noto Nastaliq Urdu',serif;font-weight:700;
+    font-size:clamp(2.4rem,8vw,4.6rem);line-height:2;
+    background:linear-gradient(180deg,#FFF6D8,var(--gold-bright) 45%,var(--gold) 70%,var(--gold-dark));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 3px 18px rgba(255,215,0,0.30));margin:6px 0;
+  }
+  .subtitle{font-size:clamp(1rem,3vw,1.4rem);color:var(--gold-light);font-weight:500;margin-top:4px;}
+  .hero-name{
+    margin-top:18px;font-size:clamp(1.5rem,5vw,2.3rem);color:#fff;font-weight:600;
+    text-shadow:0 0 16px rgba(201,168,76,0.4);
+  }
+
+  /* Divider */
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:40px 0 26px;}
+  .divider .line{height:1px;flex:1;max-width:240px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  .divider .gem{color:var(--gold-bright);font-size:1.3rem;filter:drop-shadow(0 0 8px rgba(255,215,0,0.6));}
+
+  /* Section title */
+  .sec-title{
+    text-align:center;font-family:'Noto Nastaliq Urdu',serif;font-weight:700;
+    font-size:clamp(1.6rem,5vw,2.6rem);line-height:2.1;
+    color:var(--gold-bright);text-shadow:0 0 18px rgba(255,215,0,0.25);margin-bottom:6px;
+  }
+  .sec-sub{text-align:center;color:var(--gold-light);font-size:.95rem;margin-bottom:28px;opacity:.9;}
+
+  /* Card */
+  .card{
+    background:linear-gradient(180deg,rgba(20,15,8,0.92),rgba(6,5,3,0.96));
+    border:1px solid rgba(201,168,76,0.4);border-radius:18px;
+    padding:30px 28px;margin-bottom:26px;position:relative;
+    box-shadow:0 18px 50px rgba(0,0,0,0.6),inset 0 1px 0 rgba(201,168,76,0.18);
+  }
+  .card::before{
+    content:'';position:absolute;inset:7px;border:1px solid rgba(201,168,76,0.18);border-radius:12px;pointer-events:none;
+  }
+  .card-head{
+    font-family:'Noto Nastaliq Urdu',serif;font-weight:700;font-size:1.5rem;color:var(--gold-bright);
+    display:flex;align-items:center;gap:12px;margin-bottom:16px;position:relative;
+  }
+  .card-head .ic{font-size:1.5rem;filter:drop-shadow(0 0 8px rgba(255,215,0,0.5));}
+  .card p{font-size:1.06rem;color:var(--cream);margin-bottom:12px;text-align:justify;}
+  .card p:last-child{margin-bottom:0;}
+
+  /* Info grid */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+  .info-item{
+    background:linear-gradient(180deg,rgba(201,168,76,0.10),rgba(0,0,0,0.3));
+    border:1px solid rgba(201,168,76,0.35);border-radius:12px;padding:16px 18px;text-align:center;
+  }
+  .info-item .k{font-size:.8rem;color:var(--gold);letter-spacing:1px;margin-bottom:4px;}
+  .info-item .v{font-size:1.25rem;color:#fff;font-weight:600;}
+
+  /* Chart */
+  .chart-stage{display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:center;}
+  .chart-box{flex:1 1 380px;min-width:320px;max-width:480px;}
+  .chart-box svg{width:100%;height:auto;display:block;
+    filter:drop-shadow(0 0 22px rgba(201,168,76,0.30));}
+  .chart-legend{flex:1 1 300px;min-width:280px;}
+
+  /* Tables */
+  table.tbl{width:100%;border-collapse:collapse;font-size:1rem;margin-top:6px;}
+  table.tbl th,table.tbl td{border:1px solid rgba(201,168,76,0.3);padding:11px 12px;text-align:center;}
+  table.tbl th{background:linear-gradient(180deg,rgba(201,168,76,0.25),rgba(201,168,76,0.08));color:var(--gold-bright);font-weight:700;}
+  table.tbl tr:nth-child(even) td{background:rgba(201,168,76,0.05);}
+  table.tbl td{color:var(--cream);}
+  table.tbl .pl{color:#fff;font-weight:600;}
+
+  /* prediction grid */
+  .pred-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+  .pred{
+    background:linear-gradient(180deg,rgba(18,13,7,0.95),rgba(5,4,2,0.97));
+    border:1px solid rgba(201,168,76,0.35);border-radius:16px;padding:24px 22px;position:relative;overflow:hidden;
+  }
+  .pred::after{content:'';position:absolute;top:-40px;left:-40px;width:120px;height:120px;
+    background:radial-gradient(circle,rgba(201,168,76,0.18),transparent 70%);}
+  .pred h3{font-size:1.35rem;color:var(--gold-bright);margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+  .pred p{font-size:1.02rem;color:var(--cream);text-align:justify;}
+
+  /* Year timeline */
+  .year-block{
+    background:linear-gradient(90deg,rgba(201,168,76,0.08),rgba(0,0,0,0));
+    border-right:3px solid var(--gold);border-radius:10px;
+    padding:16px 20px 16px 16px;margin-bottom:14px;
+  }
+  .year-block .yr{
+    display:inline-block;font-family:'Cinzel',serif;font-weight:700;font-size:1.05rem;
+    color:#000;background:linear-gradient(180deg,var(--gold-light),var(--gold));
+    padding:3px 14px;border-radius:20px;margin-bottom:8px;letter-spacing:1px;
+  }
+  .year-block .age{color:var(--gold);font-size:.85rem;margin-right:8px;}
+  .year-block p{font-size:1.02rem;color:var(--cream);text-align:justify;margin:0;}
+
+  /* Quote / signature */
+  .signature{
+    text-align:center;background:linear-gradient(180deg,rgba(201,168,76,0.14),rgba(0,0,0,0.4));
+    border:1px solid var(--gold);border-radius:16px;padding:30px 24px;margin:30px 0;
+    font-size:clamp(1.2rem,4vw,1.7rem);color:var(--gold-light);font-weight:600;
+    box-shadow:0 0 30px rgba(201,168,76,0.2),inset 0 0 30px rgba(201,168,76,0.06);
+  }
+
+  /* Contact */
+  .contact-card{
+    background:linear-gradient(180deg,rgba(26,18,8,0.96),rgba(6,5,3,0.98));
+    border:1.5px solid var(--gold);border-radius:20px;padding:34px 26px;text-align:center;
+    box-shadow:0 0 40px rgba(201,168,76,0.25);
+  }
+  .contact-card h2{font-size:clamp(1.6rem,5vw,2.4rem);color:var(--gold-bright);margin-bottom:8px;}
+  .contact-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:22px;}
+  .contact-list a,.contact-list .ci{
+    display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;
+    background:linear-gradient(180deg,rgba(201,168,76,0.12),rgba(0,0,0,0.3));
+    border:1px solid rgba(201,168,76,0.4);border-radius:12px;padding:14px 16px;
+    color:var(--cream);font-size:1rem;transition:.25s;direction:ltr;
+  }
+  .contact-list a:hover{background:linear-gradient(180deg,rgba(201,168,76,0.3),rgba(0,0,0,0.2));transform:translateY(-2px);color:#fff;box-shadow:0 8px 22px rgba(201,168,76,0.25);}
+  .contact-list .ic{font-size:1.3rem;}
+  .cta-call{
+    display:inline-flex;align-items:center;gap:12px;margin-top:24px;direction:ltr;
+    background:linear-gradient(180deg,var(--gold-light),var(--gold),var(--gold-dark));
+    color:#1a1206;font-family:'Cinzel',serif;font-weight:700;font-size:1.25rem;letter-spacing:1px;
+    padding:16px 38px;border-radius:50px;text-decoration:none;
+    box-shadow:0 10px 30px rgba(201,168,76,0.4);transition:.25s;
+  }
+  .cta-call:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 40px rgba(255,215,0,0.5);}
+
+  footer{text-align:center;color:var(--gold);opacity:.8;font-size:.9rem;padding:30px 16px 10px;}
+
+  @media print{
+    body{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .star,.grid-overlay{display:none;}
+  }
+  @media (max-width:560px){
+    .card{padding:24px 18px;}
+    body{line-height:2.2;}
+  }
+</style>
+</head>
+<body>
+<div id="starfield"></div>
+<div class="grid-overlay"></div>
+
+<div class="wrap">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="bismillah">بِسْمِ اللہِ الرَّحْمٰنِ الرَّحِیْم</div>
+    <div class="crest">☾</div>
+    <div class="label-en">Traditional Astrology Birth Chart</div>
+    <h1 class="title">زائچہ</h1>
+    <div class="subtitle">مکمل علمِ نجوم، روحانی و کونیاتی تجزیہ</div>
+    <div class="hero-name">برائے: عبد الرحمٰن</div>
+  </header>
+
+  <!-- ===== PERSONAL INFO ===== -->
+  <section class="card">
+    <div class="card-head"><span class="ic">✦</span> بنیادی کوائف</div>
+    <div class="info-grid">
+      <div class="info-item"><div class="k">نام</div><div class="v">عبد الرحمٰن</div></div>
+      <div class="info-item"><div class="k">والدہ کا نام</div><div class="v">امّاں حوا</div></div>
+      <div class="info-item"><div class="k">تاریخِ پیدائش</div><div class="v">۱۹ جنوری ۲۰۰۶ء</div></div>
+      <div class="info-item"><div class="k">وقتِ پیدائش</div><div class="v">صبح ۵:۰۰ بجے</div></div>
+      <div class="info-item"><div class="k">مقامِ پیدائش</div><div class="v">لاہور، پاکستان</div></div>
+      <div class="info-item"><div class="k">دن</div><div class="v">جمعرات</div></div>
+    </div>
+  </section>
+
+  <div class="divider"><span class="line"></span><span class="gem">۞</span><span class="line"></span></div>
+
+  <!-- ===== BIRTH CHART ===== -->
+  <h2 class="sec-title">زائچہٴ پیدائش</h2>
+  <p class="sec-sub">روایتی شمالی طرز کا مکمل زائچہ — بارہ گھر، طالع اور سیاروی پوزیشن</p>
+
+  <section class="card">
+    <div class="chart-stage">
+      <div class="chart-box">
+        <svg viewBox="0 0 460 460" role="img" aria-label="زائچہ">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F0D080"/>
+              <stop offset="0.5" stop-color="#C9A84C"/>
+              <stop offset="1" stop-color="#8B6914"/>
+            </linearGradient>
+            <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+              <stop offset="0" stop-color="#160f06"/>
+              <stop offset="1" stop-color="#040302"/>
+            </radialGradient>
+          </defs>
+          <!-- outer frame -->
+          <rect x="10" y="10" width="440" height="440" fill="url(#bg)" stroke="url(#gold)" stroke-width="3" rx="6"/>
+          <rect x="20" y="20" width="420" height="420" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4"/>
+          <!-- diagonals -->
+          <line x1="20" y1="20" x2="440" y2="440" stroke="url(#gold)" stroke-width="2"/>
+          <line x1="440" y1="20" x2="20" y2="440" stroke="url(#gold)" stroke-width="2"/>
+          <!-- inner diamond -->
+          <polygon points="230,20 440,230 230,440 20,230" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+          <!-- sign numbers (small, gold) and planets per house -->
+          <g font-family="'Cinzel',serif" fill="#FFD700" font-size="15" font-weight="700" text-anchor="middle">
+            <text x="230" y="60">8</text>
+            <text x="118" y="48">9</text>
+            <text x="52" y="118">10</text>
+            <text x="118" y="232">11</text>
+            <text x="52" y="345">12</text>
+            <text x="118" y="412">1</text>
+            <text x="230" y="378">2</text>
+            <text x="342" y="412">3</text>
+            <text x="408" y="345">4</text>
+            <text x="342" y="232">5</text>
+            <text x="408" y="118">6</text>
+            <text x="342" y="48">7</text>
+          </g>
+
+          <!-- planets -->
+          <g font-family="'Noto Nastaliq Urdu',serif" fill="#F5EDD0" font-size="14" text-anchor="middle">
+            <!-- H1 Scorpio: Lagna + Jupiter -->
+            <text x="230" y="95" fill="#FFD700" font-size="13">طالع</text>
+            <text x="230" y="120">مشتری</text>
+            <!-- H3 Capricorn: Sun -->
+            <text x="62" y="148">شمس</text>
+            <!-- H4 Aquarius: Mercury, Venus -->
+            <text x="138" y="205">عطارد</text>
+            <text x="138" y="262">زہرہ</text>
+            <!-- H6 Aries: Rahu -->
+            <text x="118" y="388">راہو</text>
+            <!-- H7 Taurus: Mars -->
+            <text x="230" y="345">مریخ</text>
+            <!-- H9 Cancer: Saturn -->
+            <text x="395" y="320">زحل</text>
+            <!-- H11 Virgo: Moon -->
+            <text x="408" y="148">قمر</text>
+            <!-- H12 Libra: Ketu -->
+            <text x="342" y="92">کیتو</text>
+          </g>
+        </svg>
+      </div>
+      <div class="chart-legend">
+        <table class="tbl">
+          <tr><th>گھر</th><th>برج</th><th>دلالت</th></tr>
+          <tr><td>۱</td><td>عقرب</td><td>ذات، شخصیت، صحت</td></tr>
+          <tr><td>۲</td><td>قوس</td><td>دولت، خاندان، گفتار</td></tr>
+          <tr><td>۳</td><td>جدی</td><td>ہمت، بھائی، محنت</td></tr>
+          <tr><td>۴</td><td>دلو</td><td>ماں، گھر، جائیداد</td></tr>
+          <tr><td>۵</td><td>حوت</td><td>اولاد، تعلیم، محبت</td></tr>
+          <tr><td>۶</td><td>حمل</td><td>دشمن، بیماری، مقابلہ</td></tr>
+          <tr><td>۷</td><td>ثور</td><td>شادی، شریکِ حیات</td></tr>
+          <tr><td>۸</td><td>جوزا</td><td>راز، وراثت، تبدیلی</td></tr>
+          <tr><td>۹</td><td>سرطان</td><td>قسمت، سفر، مذہب</td></tr>
+          <tr><td>۱۰</td><td>اسد</td><td>کاروبار، عہدہ، شہرت</td></tr>
+          <tr><td>۱۱</td><td>سنبلہ</td><td>آمدنی، خواہشات، دوست</td></tr>
+          <tr><td>۱۲</td><td>میزان</td><td>خرچ، بیرونی سفر، روحانیت</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANETARY POSITIONS ===== -->
+  <section class="card">
+    <div class="card-head"><span class="ic">☉</span> سیاروی پوزیشن (گرہوں کی حالت)</div>
+    <table class="tbl">
+      <tr><th>سیارہ</th><th>برج</th><th>درجہ</th><th>گھر</th><th>حالت</th></tr>
+      <tr><td class="pl">طالع (لگن)</td><td>عقرب</td><td>۱۴°</td><td>۱</td><td>—</td></tr>
+      <tr><td class="pl">شمس (آفتاب)</td><td>جدی</td><td>۲۹°</td><td>۳</td><td>قوی</td></tr>
+      <tr><td class="pl">قمر (چاند)</td><td>سنبلہ</td><td>۱۲°</td><td>۱۱</td><td>متوسط</td></tr>
+      <tr><td class="pl">مریخ (مرّیخ)</td><td>ثور</td><td>۱۶°</td><td>۷</td><td>متوسط</td></tr>
+      <tr><td class="pl">عطارد</td><td>دلو</td><td>۵°</td><td>۴</td><td>رجعت</td></tr>
+      <tr><td class="pl">زہرہ</td><td>دلو</td><td>۶°</td><td>۴</td><td>رجعت</td></tr>
+      <tr><td class="pl">مشتری</td><td>عقرب</td><td>۱۰°</td><td>۱</td><td>قوی (طالع میں)</td></tr>
+      <tr><td class="pl">زحل</td><td>سرطان</td><td>۹°</td><td>۹</td><td>رجعت</td></tr>
+      <tr><td class="pl">راہو</td><td>حمل</td><td>۲۶°</td><td>۶</td><td>—</td></tr>
+      <tr><td class="pl">کیتو</td><td>میزان</td><td>۲۶°</td><td>۱۲</td><td>—</td></tr>
+    </table>
+  </section>
+
+  <div class="divider"><span class="line"></span><span class="gem">☽</span><span class="line"></span></div>
+
+  <!-- ===== BURJ ANALYSIS ===== -->
+  <h2 class="sec-title">برج تجزیہ</h2>
+  <p class="sec-sub">آفتابی برج: جدی (Capricorn) — حاکم سیارہ: زحل · طالع: عقرب — حاکم سیارہ: مریخ</p>
+
+  <section class="card">
+    <div class="card-head"><span class="ic">♑</span> برجِ جدی کی شخصیت</div>
+    <p>عبد الرحمٰن کا آفتابی برج «جدی» ہے جس کا حاکم سیارہ زحل ہے۔ یہ خاکی (زمینی) برج اپنے حامل کو غیر معمولی صبر، سنجیدگی، بلند حوصلہ اور نظم و ضبط عطا کرتا ہے۔ آپ کی فطرت میں ذمہ داری کا گہرا احساس، عملی سوچ اور مقصد کے حصول کے لیے مسلسل محنت کا جذبہ نمایاں ہے۔ آپ جذبات سے زیادہ عقل و دانش سے فیصلے کرنے والے ہیں اور عمر سے بڑھ کر سمجھ دار سمجھے جاتے ہیں۔</p>
+    <p>زحل کی حکمرانی آپ کو وفادار، با اصول اور بھروسے کے قابل بناتی ہے، مگر بعض اوقات ضرورت سے زیادہ سوچ، تنہائی پسندی اور ضد بھی پیدا کر دیتی ہے۔ طالعِ عقرب اور پہلے گھر میں مشتری کی موجودگی آپ کی شخصیت میں گہرائی، راز داری، روحانی کشش اور غیر معمولی قوتِ ارادی بھرتی ہے۔ آپ ظاہری طور پر کم گو مگر باطن میں نہایت طاقتور اور پُر عزم انسان ہیں۔</p>
+    <p>پہلے گھر میں مشتری کی نظر آپ کو خوش بختی، علم دوستی، بزرگوں کی شفقت اور بتدریج بلند مقام عطا کرتی ہے۔ نویں گھر (قسمت) میں زحل اشارہ کرتا ہے کہ آپ کی کامیابی آہستہ مگر مضبوط بنیادوں پر قائم ہوگی — جلد بازی نقصان اور صبر کامیابی کی کنجی ہے۔</p>
+  </section>
+
+  <div class="divider"><span class="line"></span><span class="gem">✶</span><span class="line"></span></div>
+
+  <!-- ===== LIFE AREA PREDICTIONS ===== -->
+  <h2 class="sec-title">تفصیلی پیش گوئی</h2>
+  <p class="sec-sub">زندگی · کاروبار · شادی · دولت · صحت · رشتے · قسمت · مستقبل</p>
+
+  <div class="pred-grid">
+    <div class="pred"><h3><span>🕯️</span> زندگی</h3><p>آپ کی مجموعی زندگی جدوجہد اور بتدریج عروج کی داستان ہے۔ ابتدائی عمر میں آزمائشیں اور محدود وسائل آپ کو مضبوط بناتے ہیں، مگر زحل کا اثر ۲۸ سال کے بعد آپ کی قسمت کو مستحکم اور باوقار مقام عطا کرے گا۔ آپ خود ساختہ کامیاب انسان بنیں گے جس کی عزت اس کے کردار اور محنت کے باعث ہوگی۔</p></div>
+
+    <div class="pred"><h3><span>💼</span> کاروبار و کیریئر</h3><p>دسویں اور تیسرے گھر کا اثر آپ کو محنتی، منصوبہ ساز اور قائدانہ صلاحیتوں کا مالک بناتا ہے۔ آپ کے لیے سرکاری ملازمت، انتظامی عہدہ، تعمیرات، زمین و جائیداد، ٹیکنالوجی یا اپنا منظم کاروبار نہایت موزوں ہے۔ ابتدا میں ترقی سست رہے گی مگر ۲۵ سال کے بعد مسلسل عروج ملے گا۔</p></div>
+
+    <div class="pred"><h3><span>💍</span> شادی و ازدواجی زندگی</h3><p>ساتویں گھر میں مریخ شادی میں جوش، محبت اور وفاداری کا اشارہ دیتا ہے، مگر مزاج میں تیزی پر قابو ضروری ہے۔ آپ کی شادی ۲۷ تا ۳۱ سال کے درمیان نہایت موزوں ہے۔ شریکِ حیات باعزت، سلیقہ مند اور آپ کے لیے خوش قسمت ثابت ہوں گی۔ ازدواجی زندگی وقت کے ساتھ مزید مضبوط اور پُرسکون ہوگی۔</p></div>
+
+    <div class="pred"><h3><span>💰</span> دولت و مال</h3><p>دولت آپ کی زندگی میں محنت اور صبر سے آئے گی، مفت یا اچانک نہیں۔ گیارہویں گھر میں قمر مستقل آمدنی اور متعدد ذرائع کی نشاندہی کرتا ہے۔ ۳۰ سال کے بعد جائیداد، گاڑی اور مالی فراوانی کے قوی امکانات ہیں۔ فضول خرچی اور قرض سے بچنا آپ کی خوش حالی کی ضمانت ہے۔</p></div>
+
+    <div class="pred"><h3><span>🩺</span> صحت</h3><p>طالعِ عقرب آپ کو بنیادی طور پر مضبوط جسم دیتا ہے، تاہم زحل کے اثر سے ہڈیوں، جوڑوں، معدہ اور ذہنی دباؤ کا خیال رکھنا ضروری ہے۔ نیند کا توازن، متوازن غذا اور باقاعدہ ورزش آپ کو طویل اور صحت مند عمر عطا کرے گی۔ منفی سوچ سے گریز کیجیے۔</p></div>
+
+    <div class="pred"><h3><span>👨‍👩‍👦</span> رشتے و خاندان</h3><p>آپ خاندان کے لیے سہارا اور ذمہ دار فرد ثابت ہوں گے۔ والدہ کی دعائیں آپ کی زندگی میں نہایت بابرکت ہیں۔ بھائی بہنوں اور والدین سے تعلق وقت کے ساتھ گہرا ہوگا۔ کچھ رشتہ دار حاسد ہو سکتے ہیں، اس لیے راز داری اختیار کریں۔</p></div>
+
+    <div class="pred"><h3><span>⭐</span> قسمت</h3><p>نویں گھر میں زحل آپ کی قسمت کو «دیر آید، درست آید» کے اصول پر چلاتا ہے۔ آپ کی محنت ضائع نہیں ہوگی، بلکہ ہر آزمائش کے بعد بہتر مقام ملے گا۔ ۲۹ سال کے بعد زحل کی واپسی آپ کے مقدر کو مکمل طور پر سنبھال دے گی۔</p></div>
+
+    <div class="pred"><h3><span>🔮</span> مستقبل</h3><p>آپ کا مستقبل روشن، باوقار اور بابرکت ہے۔ روحانی جھکاؤ، علم اور خدمتِ خلق آپ کو معاشرے میں بلند مقام دلائے گا۔ درمیانی عمر کے بعد آپ ایک رہنما، صاحبِ حیثیت اور صاحبِ عزت شخصیت کے طور پر پہچانے جائیں گے۔</p></div>
+
+    <div class="pred"><h3><span>⚔️</span> دشمن و حاسد</h3><p>چھٹے گھر میں راہو خفیہ دشمنوں اور حاسدوں کی نشاندہی کرتا ہے، مگر آپ کا طالع اور مشتری ہمیشہ آپ کی حفاظت کریں گے۔ خاموشی، صبر اور صدقہ آپ کے دشمنوں کو ناکام بنا دے گا۔ کسی پر جلد اعتماد کرنے سے گریز کریں۔</p></div>
+
+    <div class="pred"><h3><span>🌙</span> روحانی ترقی</h3><p>بارہویں گھر میں کیتو اور طالع میں مشتری آپ کو فطری طور پر روحانیت، تصوف اور باطنی علوم کی طرف مائل کرتے ہیں۔ ذکر، نماز اور بزرگوں کی صحبت آپ کی روح کو سکون اور آپ کے معاملات کو آسانی عطا کرے گی۔</p></div>
+  </div>
+
+  <div class="divider"><span class="line"></span><span class="gem">۞</span><span class="line"></span></div>
+
+  <!-- ===== PAST YEAR BY YEAR ===== -->
+  <h2 class="sec-title">ماضی کا سال بہ سال تجزیہ</h2>
+  <p class="sec-sub">پیدائش سے اب تک — ہر سال کے اہم واقعات، کامیابیاں، آزمائشیں اور تبدیلیاں</p>
+
+  <section class="card">
+    <div class="year-block"><span class="yr">2006</span><span class="age">عمر ۰ سال</span><p>پیدائش کا مبارک سال۔ زحل اور مشتری کے اثر میں آپ کی آمد خاندان کے لیے خوشی و برکت لائی۔ ابتدائی صحت نازک مگر والدہ کی شفقت میں محفوظ رہی۔</p></div>
+    <div class="year-block"><span class="yr">2007</span><span class="age">عمر ۱ سال</span><p>جسمانی نشوونما تیز رہی۔ موسمی نزلہ و بخار کے باوجود مجموعی صحت بہتر۔ گھر کا ماحول پُرسکون اور مالی حالات مستحکم رہے۔</p></div>
+    <div class="year-block"><span class="yr">2008</span><span class="age">عمر ۲ سال</span><p>عطارد کے اثر سے ذہانت کے ابتدائی آثار نمایاں ہوئے — جلد بولنا اور سیکھنا۔ خاندان میں چھوٹی تبدیلی یا نقل مکانی کا امکان رہا۔</p></div>
+    <div class="year-block"><span class="yr">2009</span><span class="age">عمر ۳ سال</span><p>والدہ سے گہرا لگاؤ اور تجسس بھری فطرت۔ توانائی بھرپور رہی، چھوٹی موٹی ٹھوکریں اور احتیاط کے لمحات بھی آئے۔ سیکھنے کی رفتار قابلِ تعریف رہی۔</p></div>
+    <div class="year-block"><span class="yr">2010</span><span class="age">عمر ۴ سال</span><p>ابتدائی تعلیم کا آغاز۔ تیز یادداشت اور سنجیدگی نمایاں ہوئی۔ والد کی محنت کے ثمرات سے خاندانی حالات میں بہتری آئی۔</p></div>
+    <div class="year-block"><span class="yr">2011</span><span class="age">عمر ۵ سال</span><p>باقاعدہ اسکول کا آغاز۔ زحل کے اثر سے نظم و ضبط اور ذمہ داری کا احساس ابھرا۔ کبھی کبھار تنہائی پسندی مگر تعلیم میں نمایاں کارکردگی۔</p></div>
+    <div class="year-block"><span class="yr">2012</span><span class="age">عمر ۶ سال</span><p>تعلیمی بنیاد مضبوط ہوئی، اساتذہ کی تعریف ملی۔ موسمی الرجی یا کھانسی کا خیال رکھنا پڑا۔ خاندانی محبت اور یگانگت مزید بڑھی۔</p></div>
+    <div class="year-block"><span class="yr">2013</span><span class="age">عمر ۷ سال</span><p>محنتی اور مقابلے کی فطرت ابھری (راہو کا اثر)۔ نئی دوستیاں بنیں۔ خاندان پر معمولی مالی دباؤ آیا مگر صبر سے گزر گیا۔</p></div>
+    <div class="year-block"><span class="yr">2014</span><span class="age">عمر ۸ سال</span><p>کھیل اور مشاغل میں دلچسپی بڑھی۔ جذباتی حساسیت نمایاں ہوئی۔ خاندان کے ساتھ سفر اور بڑھتا ہوا اعتماد اس سال کی خاصیت رہی۔</p></div>
+    <div class="year-block"><span class="yr">2015</span><span class="age">عمر ۹ سال</span><p>عمر سے بڑھ کر ذہنی پختگی۔ کلاس میں قائدانہ کردار۔ گھر کی بہتری یا منتقلی کے امکانات، اور تعلیمی میدان میں استحکام۔</p></div>
+    <div class="year-block"><span class="yr">2016</span><span class="age">عمر ۱۰ سال</span><p>تعلیمی موڑ کا سال۔ ٹیکنالوجی اور حساب کی طرف رجحان۔ ہلکی ضد مگر صحت بہتر۔ خود اعتمادی میں واضح اضافہ ہوا۔</p></div>
+    <div class="year-block"><span class="yr">2017</span><span class="age">عمر ۱۱ سال</span><p>جسمانی و جذباتی تبدیلیوں کا آغاز (قمر کا اثر)۔ ذمہ داری کا احساس بڑھا۔ کسی بزرگ کی صحت کی فکر خاندان میں رہی۔</p></div>
+    <div class="year-block"><span class="yr">2018</span><span class="age">عمر ۱۲ سال</span><p>ثانوی تعلیم کا مرحلہ۔ کیریئر کے رجحانات بننے لگے۔ روحانی و باطنی موضوعات کی طرف کشش، اور امتحانی دباؤ کا سامنا رہا۔</p></div>
+    <div class="year-block"><span class="yr">2019</span><span class="age">عمر ۱۳ سال</span><p>میٹرک کی تیاری کا دور۔ نظم و ضبط نے ثمر دیا۔ سماجی دائرہ بڑھا، مگر بعض ساتھیوں سے معمولی اختلاف اور حسد کا تجربہ بھی ہوا۔</p></div>
+    <div class="year-block"><span class="yr">2020</span><span class="age">عمر ۱۴ سال</span><p>عالمی وبا کے سبب رکاوٹیں اور آن لائن تعلیم۔ تنہائی آپ کی فطرت کے موافق رہی اور خود سے سیکھنے کی صلاحیت نکھری۔ خاندانی مالی حالات آزمائش میں رہے۔</p></div>
+    <div class="year-block"><span class="yr">2021</span><span class="age">عمر ۱۵ سال</span><p>بحالی اور نئی توجہ کا سال۔ کسی ہنر یا کمائی کی طرف ابتدائی دلچسپی۔ پہلی جذباتی کشش (پانچواں گھر)۔ آنکھوں اور ذہنی دباؤ کا خیال ضروری رہا۔</p></div>
+    <div class="year-block"><span class="yr">2022</span><span class="age">عمر ۱۶ سال</span><p>اہم تعلیمی سال اور شعبے کے انتخاب کے فیصلے۔ بلند حوصلگی نمایاں رہی۔ خاندان کی مکمل حمایت اور ایک مختصر سفر کا امکان۔</p></div>
+    <div class="year-block"><span class="yr">2023</span><span class="age">عمر ۱۷ سال</span><p>کالج/انٹرمیڈیٹ کا مرحلہ۔ شخصیت میں استحکام آیا۔ دوستی اور کسی دھوکے سے سبق ملا۔ جزوقتی کمائی یا ہنر کی طرف عملی قدم۔</p></div>
+    <div class="year-block"><span class="yr">2024</span><span class="age">عمر ۱۸ سال</span><p>بلوغت اور بالغ زندگی کی دہلیز۔ کیریئر کی سمت واضح ہوئی، خود اعتمادی بڑھی۔ ممکنہ پہلی آمدنی یا فری لانس کام، اور دل کی کشش کا تجربہ۔</p></div>
+    <div class="year-block"><span class="yr">2025</span><span class="age">عمر ۱۹ سال</span><p>مستقبل کی بنیاد رکھنے کا سال۔ سخت محنت، داخلوں اور امتحانات کا دور۔ ملا جلا نصیب، روحانی جھکاؤ میں اضافہ، اور نیند و دباؤ کا خیال ضروری رہا۔</p></div>
+  </section>
+
+  <div class="divider"><span class="line"></span><span class="gem">✶</span><span class="line"></span></div>
+
+  <!-- ===== FUTURE YEAR BY YEAR ===== -->
+  <h2 class="sec-title">مستقبل کی سال بہ سال پیش گوئی</h2>
+  <p class="sec-sub">آنے والے برسوں میں کیریئر، دولت، شادی، محبت، کاروبار، دشمن، مواقع، خطرات اور روحانی ترقی</p>
+
+  <section class="card">
+    <div class="year-block"><span class="yr">2026</span><span class="age">عمر ۲۰ سال</span><p>ترقی کا اہم سال۔ تعلیم و کیریئر کا آغاز اور مشتری کی نوازش سے نئے مواقع۔ دوستوں کے دھوکے سے ہوشیار رہیں۔ آمدنی سست مگر مستقل بنیادوں پر شروع ہوگی۔</p></div>
+    <div class="year-block"><span class="yr">2027</span><span class="age">عمر ۲۱ سال</span><p>کیریئر کے استحکام کا سال۔ ہنر کی پہچان اور سفر کے امکانات۔ محبت کی زندگی متحرک رہے گی۔ بچت کریں اور جلد بازی میں کسی شراکت سے گریز کریں۔</p></div>
+    <div class="year-block"><span class="yr">2028</span><span class="age">عمر ۲۲ سال</span><p>مالی بہتری کا آغاز۔ ملازمت یا کاروبار کی بنیاد۔ خاندان کی طرف سے سیٹل ہونے کا دباؤ۔ حاسد خاموش رہیں — کم گوئی اور روحانی عمل مددگار ہوں گے۔</p></div>
+    <div class="year-block"><span class="yr">2029</span><span class="age">عمر ۲۳ سال</span><p>مضبوط کیریئر کا سال۔ ترقی یا کاروبار میں وسعت، ممکنہ بیرونِ ملک موقع۔ تعلق گہرا ہوگا۔ معدہ اور غذا کا خاص خیال رکھیں۔</p></div>
+    <div class="year-block"><span class="yr">2030</span><span class="age">عمر ۲۴ سال</span><p>شادی کے امکانات روشن (ساتویں گھر میں مریخ)۔ مستحکم آمدنی، گاڑی یا جائیداد۔ کاروبار میں کامیابی، مگر غصے پر قابو ضروری۔</p></div>
+    <div class="year-block"><span class="yr">2031</span><span class="age">عمر ۲۵ سال</span><p>بلند حوصلگی اور پہچان کا عروج۔ ممکنہ شادی اور مالی فوائد۔ کسی قانونی یا معاہدے کے معاملے میں احتیاط، اور صدقہ و خیرات کی تاکید۔</p></div>
+    <div class="year-block"><span class="yr">2032</span><span class="age">عمر ۲۶ سال</span><p>خاندان میں اضافہ اور ذمہ داریوں میں بڑھوتری۔ دولت کا ارتکاز۔ کاروباری شراکت میں احتیاط، اور روحانی پختگی میں اضافہ۔</p></div>
+    <div class="year-block"><span class="yr">2033</span><span class="age">عمر ۲۷ سال</span><p>استحکام اور بچت/سرمایہ کاری کا سال۔ اولاد و خاندان کی خوشی۔ کمر اور جوڑوں کی معمولی شکایت (زحل)۔ کام کے سلسلے میں سفر۔</p></div>
+    <div class="year-block"><span class="yr">2034</span><span class="age">عمر ۲۸ سال</span><p>کیریئر میں بڑی چھلانگ اور قائدانہ کردار۔ نیک نامی بڑھے گی۔ خفیہ دشمنوں سے ہوشیار رہیں۔ جائیداد میں فائدہ اور متوازن تعلقات۔</p></div>
+    <div class="year-block"><span class="yr">2035</span><span class="age">عمر ۲۹ سال</span><p>زحل کی واپسی کا آزمائشی مرحلہ — محنت کا صلہ بعد میں ملے گا۔ صبر اور مالی نظم و ضبط ضروری۔ ازدواجی و خاندانی زندگی میں استحکام۔</p></div>
+    <div class="year-block"><span class="yr">2036</span><span class="age">عمر ۳۰ سال</span><p>زندگی کا اہم موڑ اور پختگی کا دور۔ مستحکم مقام، ممکنہ نیا منصوبہ۔ مالی حالات مضبوط، مگر دباؤ اور صحت کا خیال رکھیں۔</p></div>
+    <div class="year-block"><span class="yr">2037</span><span class="age">عمر ۳۱ سال</span><p>وسعت اور شعبے میں شہرت۔ بیرونی روابط اور دولت۔ خاندانی ہم آہنگی، مگر حد سے زیادہ خود اعتمادی سے گریز کریں۔</p></div>
+    <div class="year-block"><span class="yr">2038</span><span class="age">عمر ۳۲ سال</span><p>مستحکم خوش حالی۔ سرمایہ کاری ثمر آور۔ اولاد کی نشوونما، روحانی رہنمائی اور پرانے تنازعات کا حل۔</p></div>
+    <div class="year-block"><span class="yr">2039</span><span class="age">عمر ۳۳ سال</span><p>بہترین کمائی کے برسوں کا آغاز۔ جائیداد اور سماجی عزت۔ ازدواجی محبت میں گرم جوشی، اور صحت کی حفاظت ضروری۔</p></div>
+    <div class="year-block"><span class="yr">2040</span><span class="age">عمر ۳۴ سال</span><p>اختیار اور اثر و رسوخ کا دور۔ کاروباری کامیابی اور رہنمائی کا کردار۔ حسد اور مقدمہ بازی سے بچیں — صدقہ تحفظ دے گا۔</p></div>
+    <div class="year-block"><span class="yr">2041</span><span class="age">عمر ۳۵ سال</span><p>دولت کا استحکام اور خاندانی ذمہ داریاں۔ سفر یا زیارت کا امکان۔ جذباتی تسکین، دل اور بلڈ پریشر کا خیال رکھیں۔</p></div>
+    <div class="year-block"><span class="yr">2042</span><span class="age">عمر ۳۶ سال</span><p>وراثت و میراث (legacy) کی تعمیر۔ طویل المدتی تحفظ اور پہچان۔ ممکنہ منتقلی، اور قسمت کی مضبوط حمایت۔</p></div>
+    <div class="year-block"><span class="yr">2043</span><span class="age">عمر ۳۷ سال</span><p>دانائی اور استحکام کا دور۔ روحانی گہرائی اور مالی سکون۔ دوسروں کی رہنمائی، اور ذہنی دباؤ پر قابو ضروری۔</p></div>
+    <div class="year-block"><span class="yr">2044</span><span class="age">عمر ۳۸ سال</span><p>کامیابی اور عزت کا سال۔ اثر و رسوخ میں وسعت اور خاندان کا فخر۔ خفیہ حریفوں سے ہوشیار رہیں، اور زندگی میں توازن رکھیں۔</p></div>
+    <div class="year-block"><span class="yr">2045</span><span class="age">عمر ۳۹ سال</span><p>محنتوں کا ثمر اور خوش حالی کا عروج۔ عزت، روحانی اطمینان اور قسمت کی مکمل نوازش۔ صبر اور ایمان نے آپ کو سرخرو کر دیا۔</p></div>
+  </section>
+
+  <!-- ===== SIGNATURE (in place of any note) ===== -->
+  <div class="signature">یہ زائچہ سید نعمان علی شاہ کی جانب سے تیار کیا گیا ہے۔</div>
+
+  <div class="divider"><span class="line"></span><span class="gem">۞</span><span class="line"></span></div>
+
+  <!-- ===== CONTACT ===== -->
+  <div class="contact-card">
+    <div class="label-en">Business Platforms &amp; Contact</div>
+    <h2>ابھی رابطہ کریں</h2>
+    <p style="color:var(--cream);font-size:1.05rem;">عامل بابا سید نعمان علی شاہ — ۲۴/۷ دستیاب</p>
+    <a class="cta-call" href="tel:+923092015876"><span class="ic">📞</span> Call / WhatsApp: +92 309 2015876</a>
+    <div class="contact-list">
+      <a href="https://wa.me/923092015876" target="_blank" rel="noopener"><span class="ic">📱</span> WhatsApp Chat</a>
+      <a href="https://aamil-baba-numan.localo.site" target="_blank" rel="noopener"><span class="ic">🌐</span> Website</a>
+      <a href="https://celestia-astrology-q540.arcada.app/" target="_blank" rel="noopener"><span class="ic">✦</span> Business Platform</a>
+      <a href="https://www.facebook.com/share/14jbKmngHor" target="_blank" rel="noopener"><span class="ic">📘</span> Facebook</a>
+      <a href="https://www.instagram.com/syednumanalishah1" target="_blank" rel="noopener"><span class="ic">📸</span> Instagram</a>
+      <div class="ci"><span class="ic">🗺️</span> Johar Town Phase 2, Near Sonehri Bank, Lahore</div>
+    </div>
+  </div>
+
+  <footer>﷽ &nbsp;·&nbsp; زائچہ بطورِ عبد الرحمٰن &nbsp;·&nbsp; سید نعمان علی شاہ</footer>
+
+</div>
+
+<script>
+  (function(){
+    var sf=document.getElementById('starfield');
+    if(!sf) return;
+    var n=window.innerWidth<600?70:140;
+    for(var i=0;i<n;i++){
+      var s=document.createElement('div');
+      s.className='star';
+      var sz=Math.random()*2.2+0.6;
+      s.style.width=sz+'px';s.style.height=sz+'px';
+      s.style.left=Math.random()*100+'%';
+      s.style.top=Math.random()*100+'%';
+      s.style.setProperty('--dur',(Math.random()*3+2)+'s');
+      s.style.setProperty('--op',(Math.random()*0.7+0.3).toFixed(2));
+      s.style.animationDelay=(Math.random()*4)+'s';
+      sf.appendChild(s);
+    }
+  })();
+</script>
+</body>
+</html>
