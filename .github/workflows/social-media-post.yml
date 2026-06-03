@@ -56,10 +56,15 @@ jobs:
           # Instagram credentials
           INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+
+          # Workflow inputs (passed via env to prevent script injection)
+          INPUT_PLATFORMS: ${{ github.event.inputs.platforms || 'twitter,facebook' }}
+          INPUT_POST_ID: ${{ github.event.inputs.post_id }}
+          INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
-          PLATFORMS="${{ github.event.inputs.platforms || 'twitter,facebook' }}"
-          POST_ID="${{ github.event.inputs.post_id }}"
-          DRY_RUN="${{ github.event.inputs.dry_run }}"
+          PLATFORMS="$INPUT_PLATFORMS"
+          POST_ID="$INPUT_POST_ID"
+          DRY_RUN="$INPUT_DRY_RUN"
 
           CMD="python -m social_media_bot.poster --platforms $PLATFORMS"
 
