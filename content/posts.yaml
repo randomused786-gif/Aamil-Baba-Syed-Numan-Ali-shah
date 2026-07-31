@@ -1,0 +1,45 @@
+# Social Media Post Definitions
+#
+# Each post has:
+#   id:                  Unique identifier for the post
+#   text:                The message body (keep under 280 chars for Twitter)
+#   media:               Optional list of media files (relative to content/media/)
+#                        or public URLs
+#   instagram_image_url: Public URL required by Instagram Graph API
+#   scheduled_date:      Date (YYYY-MM-DD) when this post should auto-publish
+#   platforms:           Default platforms if not overridden via CLI
+
+posts:
+  - id: welcome-post
+    text: >
+      Assalamu Alaikum! Welcome to the official page of Aamil Baba Syed Numan
+      Ali Shah - Expert in Rohaniyat, Istikhara, and Spiritual Healing.
+      Available 24/7. Contact us for guidance. #SpiritualHealing #Istikhara
+    media: []
+    scheduled_date: "2026-05-24"
+    platforms:
+      - twitter
+      - facebook
+
+  - id: services-post
+    text: >
+      Our spiritual services include: Istikhara, Wazaif, Taweezat, Love
+      Marriage Solutions, Kala Jadu Removal, and Business Problem Solutions.
+      Consult Aamil Baba Numan Ali Shah today! #RohaniIlaj #AmilBaba
+    media: []
+    scheduled_date: "2026-05-25"
+    platforms:
+      - twitter
+      - facebook
+
+  - id: contact-post
+    text: >
+      Need spiritual guidance? Reach out to Aamil Baba Syed Numan Ali Shah.
+      Call/WhatsApp: +92 309 2015876. Available 24/7 for consultations.
+      #SpiritualHealer #Lahore
+    media: []
+    scheduled_date: "2026-05-26"
+    platforms:
+      - twitter
+      - facebook
+      - instagram
